@@ -41,24 +41,24 @@ body {
     margin: 1rem;
 }
 
-.input-label {
+label {
     display: block;
     font-size: large;
     font-weight: 500;
 }
 
-.input {
+input {
     font-size: 14px;
-    outline: #fff;
+    /* outline: #fff; */
     padding: 0.5rem 1rem;
-    margin: 1rem;
+    margin: 0.5rem 1rem 1.5rem 1rem;
     border: 2px solid var(--primary-color);
     border-radius: 0.5rem;
     width: 100%;
     max-width: 260px;
 }
 
-#check-button {
+#submit-button {
     background: var(--primary-color);
     border: none;
     color: #fff;
