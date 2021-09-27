@@ -9,23 +9,29 @@ function calculateProfitAndLoss() {
     const qty = Number(qtyStock.value);
     const curprice = Number(currentPrice.value);
 
-    if(curprice > initial)
+    if (initial&&qty&&curprice) {
+        if(curprice > initial)
     {
         const profit = curprice-initial;
         const totalprofit = profit*qty;
-        const profitPercentage = (profit/initial)*100;
-        
-        displayMessage('The total profit is:' +totalprofit+ " and profit percentage is: " +profitPercentage+'%');
+        const profitPercentage = (profit/initial)*100;        
+        displayMessage('The total profit is:' +totalprofit+ " and profit percentage is: " +profitPercentage.toFixed(2)+'%'); //numdigit.toFixed(2)
 
     } else if(initial > curprice) {
             const loss = initial-curprice;
             const totalloss = loss*qty;
-            const lossPercentage = (loss/initial)*100;
-            displayMessage('The total loss is:' +totalloss+ ' and loss percentage is:' +lossPercentage+'%');
+            const lossPercentage = ((loss/initial)*100);
+            displayMessage('The total loss is:' +totalloss+ ' and loss percentage is:' +lossPercentage.toFixed(2)+'%');
     
         } else {
             displayMessage('No pain no gain, no gain no pain');
-        }
+        }        
+    }
+    else {
+        displayMessage('Please enter the three values');
+    }
+
+    
 }
 
 submitButton.addEventListener("click", calculateProfitAndLoss);
