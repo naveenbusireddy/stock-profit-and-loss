@@ -16,9 +16,9 @@
         <div>
             <h1>Stock Profit and Loss Calculator</h1>
             <br>
-            <label for="initial-price" >Initial Price </label><input type="number" id="initial-price" placeholder="Initial Price" />
-            <label for="qty-stock" >Quantity of Stocks</label><input type="number" id="qty-stock" placeholder="Quantity" /> 
-            <label for="current-price" >Current Price </label><input type="number" id="current-price" placeholder="Current Price" />
+            <label for="initial-price" >Initial Price </label><input type="number" min="0" id="initial-price" placeholder="Initial Price" />
+            <label for="qty-stock" >Quantity of Stocks</label><input type="number" min="0" id="qty-stock" placeholder="Quantity" /> 
+            <label for="current-price" >Current Price </label><input type="number" min="0" id="current-price" placeholder="Current Price" />
             <button id="submit-button">Profit or Loss</button>
             <p id="output" />
         </div>
